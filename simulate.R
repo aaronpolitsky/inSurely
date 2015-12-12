@@ -1,4 +1,5 @@
 require('ggplot2')
+require('wesanderson')
 
 source('simulator_helper.R')
 source("get_data.R")
@@ -10,7 +11,9 @@ plans.list <- alply(unclean.data, .margins = 1, create.plan.list)
 plans.list[[length(plans.list)+1]] <- create.uship.plan()
 
 # number of simulated years of medical events
-nsims <- 1000
+nsims <- 10000
+
+set.seed(99)
 
 years <- unlist(lapply(names(scenario.weights), function(name) {
   lapply(seq(1, nsims*scenario.weights[[name]]), function(x) {generate.events(name)})
@@ -33,17 +36,22 @@ sims.data.frames <- ldply(plans.list.sims, data.frame)
 
 # order by median
 ordered.by.median <- sims.data.frames[order(sims.data.frames$summary.Median),]
-
+ordered.by.median$plot.title <- paste0("Median Total Cost: $", ordered.by.median$summary.Median, " Plan: ", ordered.by.median$name)
 
 top.10 <- ordered.by.median[1:(10*nsims-1),]
 
 unique(top.10[,c("name",  "summary.Min.", "summary.Median", "summary.3rd.Qu.", "summary.Max.")])
 
+# use Wes Anderson colors.  Let's do Royal Tenenbaums 
+wes_palette("Royal1")
+
 ggplot(top.10, aes(x=totals)) + 
-  facet_wrap(~summary.Median, ncol=1) + 
+  facet_wrap(~plot.title, ncol=1) + 
   #facet_grid(name~metal_level) +
   geom_density() + 
-  geom_histogram(aes(y=..density..), binwidth=50, alpha=0.5)
+  geom_histogram(aes(y=..density.., fill=plot.title), binwidth=50) + 
+  scale_fill_manual(values = c(lapply(c(wes_palette("Zissou"), wes_palette("Zissou")), identity))) + 
+  guides(fill=F)
 
 d_ply(top.10, .(name), function(plan) {
   plt <- 

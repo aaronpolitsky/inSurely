@@ -18,6 +18,69 @@ copay.lookup <- list(
          "after" = 
            list("pct" = 0,
                 "fee" = 0)),
+  "$10 Copay after deductible" = 
+    list("before" = 
+           list("pct" = 100,
+                "fee" = 0),
+         "after" = 
+           list("pct" = 0,
+                "fee" = 10)),
+  "$100 Copay after deductible and 20% Coinsurance after deductible" = 
+    list("before" = 
+           list("pct" = 100,
+                "fee" = 0),
+         "after" = 
+           list("pct" = 20,
+                "fee" = 100)),
+  "$1000 Copay before deductible and 20% Coinsurance after deductible" = 
+    list("before" = 
+           list("pct" = 0,
+                "fee" = 1000),
+         "after" = 
+           list("pct" = 20,
+                "fee" = 0)),
+  "$1000 Copay before deductible and 30% Coinsurance after deductible" = 
+    list("before" = 
+           list("pct" = 0,
+                "fee" = 1000),
+         "after" = 
+           list("pct" = 30,
+                "fee" = 0)),
+  "$1000 Copay before deductible and 50% Coinsurance after deductible" = 
+    list("before" = 
+           list("pct" = 0,
+                "fee" = 1000),
+         "after" = 
+           list("pct" = 50,
+                "fee" = 0)),
+  "$120 and 20%" = 
+    list("before" = 
+           list("pct" = 20,
+                "fee" = 120),
+         "after" = 
+           list("pct" = 20,
+                "fee" = 120)),
+  "$120 Copay after deductible and 20% Coinsurance after deductible" =
+    list("before" = 
+           list("pct" = 100,
+                "fee" = 0),
+         "after" = 
+           list("pct" = 20,
+                "fee" = 120)),
+  "$150 Copay after deductible and 20% Coinsurance after deductible" = 
+    list("before" = 
+           list("pct" = 100,
+                "fee" = 0),
+         "after" = 
+           list("pct" = 20,
+                "fee" = 150)),  
+  "$1500 Copay per Stay after deductible" = 
+    list("before" = 
+           list("pct" = 100,
+                "fee" = 0),
+         "after" = 
+           list("pct" = 0,
+                "fee" = 1500)), 
   "$20 Copay after deductible" =
     list("before" = 
            list("pct" = 100,
@@ -32,6 +95,13 @@ copay.lookup <- list(
          "after" = 
            list("pct" = 0,
                 "fee" = 25)),
+  "$250 and 30%" = 
+    list("before" = 
+           list("pct" = 30,
+                "fee" = 250),
+         "after" = 
+           list("pct" = 30,
+                "fee" = 250)),
   "$250 Copay after deductible" =
     list("before" = 
            list("pct" = 100,
@@ -39,6 +109,20 @@ copay.lookup <- list(
          "after" = 
            list("pct" = 0,
                 "fee" = 250)),
+  "$250 Copay after deductible and 30% Coinsurance after deductible" =
+    list("before" = 
+           list("pct" = 100,
+                "fee" = 0),
+         "after" = 
+           list("pct" = 30,
+                "fee" = 250)),
+  "$250 Copay before deductible and 20% Coinsurance after deductible" = 
+    list("before" = 
+           list("pct" = 0,
+                "fee" = 250),
+         "after" = 
+           list("pct" = 20,
+                "fee" = 0)),
   "$30 Copay after deductible" =
     list("before" = 
            list("pct" = 100,
@@ -60,6 +144,20 @@ copay.lookup <- list(
          "after" = 
            list("pct" = 0,
                 "fee" = 300)),
+  "$300 Copay after deductible and 30% Coinsurance after deductible" =
+    list("before" = 
+           list("pct" = 100,
+                "fee" = 0),
+         "after" = 
+           list("pct" = 30,
+                "fee" = 300)),
+  "35% Coinsurance after deductible" =
+    list("before" = 
+           list("pct" = 100,
+                "fee" = 0),
+         "after" = 
+           list("pct" = 35,
+                "fee" = 0)),
   "$35 Copay before deductible" =
     list("before" = 
            list("pct" = 0,
@@ -81,6 +179,20 @@ copay.lookup <- list(
          "after" = 
            list("pct" = 20,
                 "fee" = 400)),
+  "$400 Copay before deductible and 20% Coinsurance after deductible" =
+    list("before" = 
+           list("pct" = 0,
+                "fee" = 400),
+         "after" = 
+           list("pct" = 20,
+                "fee" = 0)),
+  "$400 Copay before deductible and 25% Coinsurance after deductible" =
+    list("before" = 
+           list("pct" = 0,
+                "fee" = 400),
+         "after" = 
+           list("pct" = 25,
+                "fee" = 0)),
   "$45 Copay after deductible" =
     list("before" = 
            list("pct" = 100,
@@ -88,6 +200,13 @@ copay.lookup <- list(
          "after" = 
            list("pct" = 0,
                 "fee" = 45)),
+  "$5 Copay after deductible" = 
+    list("before" = 
+           list("pct" = 100,
+                "fee" = 0),
+         "after" = 
+           list("pct" = 0,
+                "fee" = 5)),
   "$50 Copay after deductible" =
     list("before" = 
            list("pct" = 100,
@@ -102,6 +221,20 @@ copay.lookup <- list(
          "after" = 
            list("pct" = 20,
                 "fee" = 0)),
+  "$500 and 30%" =
+    list("before" = 
+           list("pct" = 30,
+                "fee" = 500),
+         "after" = 
+           list("pct" = 30,
+                "fee" = 500)),
+  "$500 Copay after deductible" = 
+    list("before" = 
+           list("pct" = 100,
+                "fee" = 0),
+         "after" = 
+           list("pct" = 0,
+                "fee" = 500)),
   "$500 Copay and 20% Coinsurance after deductible" =
     list("before" = 
            list("pct" = 100,
@@ -115,6 +248,27 @@ copay.lookup <- list(
                 "fee" = 500),
          "after" = 
            list("pct" = 0,
+                "fee" = 0)),
+  "$500 Copay before deductible and 20% Coinsurance after deductible" = 
+    list("before" = 
+           list("pct" = 0,
+                "fee" = 500),
+         "after" = 
+           list("pct" = 20,
+                "fee" = 0)),
+  "$500 Copay before deductible and 30% Coinsurance after deductible" = 
+    list("before" = 
+           list("pct" = 0,
+                "fee" = 500),
+         "after" = 
+           list("pct" = 30,
+                "fee" = 0)),
+  "$500 Copay before deductible and 40% Coinsurance after deductible" =
+    list("before" = 
+           list("pct" = 0,
+                "fee" = 500),
+         "after" = 
+           list("pct" = 40,
                 "fee" = 0)),
   "$60 Copay after deductible"  =
     list("before" = 
@@ -130,6 +284,20 @@ copay.lookup <- list(
          "after" = 
            list("pct" = 30,
                 "fee" = 600)),
+  "$600 Copay before deductible and 20% Coinsurance after deductible" = 
+    list("before" = 
+           list("pct" = 0,
+                "fee" = 600),
+         "after" = 
+           list("pct" = 20,
+                "fee" = 0)),
+  "$600 Copay before deductible and 30% Coinsurance after deductible" = 
+    list("before" = 
+           list("pct" = 0,
+                "fee" = 600),
+         "after" = 
+           list("pct" = 30,
+                "fee" = 0)),
   "$100 Copay per Stay" = 
     list("before" = 
            list("pct" = 0,
@@ -137,6 +305,13 @@ copay.lookup <- list(
          "after" = 
            list("pct" = 0,
                 "fee" = 100)), 
+  "$200 Copay after deductible and 30% Coinsurance after deductible" =
+    list("before" = 
+           list("pct" = 100,
+                "fee" = 0),
+         "after" = 
+           list("pct" = 30,
+                "fee" = 200)),
   "$200 Copay per Stay" = 
     list("before" = 
            list("pct" = 0,
@@ -172,6 +347,41 @@ copay.lookup <- list(
          "after" = 
            list("pct" = 30,
                 "fee" = 300)),
+  "$300 Copay per Stay before deductible and 20% Coinsurance after deductible" = 
+    list("before" = 
+           list("pct" = 0,
+                "fee" = 300),
+         "after" = 
+           list("pct" = 20,
+                "fee" = 0)),
+  "$300 Copay per Stay before deductible and 30% Coinsurance after deductible" = 
+    list("before" = 
+           list("pct" = 0,
+                "fee" = 300),
+         "after" = 
+           list("pct" = 30,
+                "fee" = 0)),
+  "$400 Copay per Day" = 
+    list("before" = 
+           list("pct" = 0,
+                "fee" = 400),
+         "after" = 
+           list("pct" = 0,
+                "fee" = 400)),
+  "$400 Copay per Stay before deductible and 20% Coinsurance after deductible" = 
+    list("before" = 
+           list("pct" = 0,
+                "fee" = 400),
+         "after" = 
+           list("pct" = 20,
+                "fee" = 0)),
+  "$500 Copay per Stay after deductible and 30% Coinsurance after deductible" = 
+    list("before" = 
+           list("pct" = 100,
+                "fee" = 0),
+         "after" = 
+           list("pct" = 30,
+                "fee" = 500)),
   "$500 Copay per Stay and 30% Coinsurance after deductible" =
     list("before" = 
            list("pct" = 100,
@@ -179,6 +389,13 @@ copay.lookup <- list(
          "after" = 
            list("pct" = 30,
                 "fee" = 500)),
+  "$500 Copay per Stay before deductible and 30% Coinsurance after deductible" = 
+    list("before" = 
+           list("pct" = 0,
+                "fee" = 500),
+         "after" = 
+           list("pct" = 30,
+                "fee" = 0)),
   "$650 Copay per Day" =
     list("before" = 
            list("pct" = 0,
@@ -214,6 +431,27 @@ copay.lookup <- list(
          "after" = 
            list("pct" = 20,
                 "fee" = 0)),
+  "$750 Copay before deductible and 20% Coinsurance after deductible" = 
+    list("before" = 
+           list("pct" = 0,
+                "fee" = 750),
+         "after" = 
+           list("pct" = 20,
+                "fee" = 0)),
+  "$750 Copay per Stay before deductible and 20% Coinsurance after deductible" = 
+    list("before" = 
+           list("pct" = 0,
+                "fee" = 750),
+         "after" = 
+           list("pct" = 20,
+                "fee" = 0)),
+  "$750 Copay per Stay before deductible and 30% Coinsurance after deductible" = 
+    list("before" = 
+           list("pct" = 0,
+                "fee" = 750),
+         "after" = 
+           list("pct" = 30,
+                "fee" = 0)),
   "$750 Copay per Day" =
     list("before" = 
            list("pct" = 0,
@@ -221,6 +459,20 @@ copay.lookup <- list(
          "after" = 
            list("pct" = 0,
                 "fee" = 750)),
+  "$850 Copay per Day" =
+    list("before" = 
+           list("pct" = 0,
+                "fee" = 850),
+         "after" = 
+           list("pct" = 0,
+                "fee" = 850)),
+  "$950 Copay per Day" =
+    list("before" = 
+           list("pct" = 0,
+                "fee" = 950),
+         "after" = 
+           list("pct" = 0,
+                "fee" = 950)),
   "10% Coinsurance after deductible" =
     list("before" = 
            list("pct" = 100,
@@ -269,23 +521,50 @@ copay.lookup <- list(
                 "fee" = 0),
          "after" = 
            list("pct" = 50,
-                "fee" = 0)) 
+                "fee" = 0))
 )
 
-dollar.to.numeric <- function(dollar.string) {
-  as.numeric(gsub("\\$", "", gsub(",","", dollar.string)))
+dollar.to.numeric <- function(dollar.strings) {
+  as.numeric(gsub("\\$", "", gsub(",","", dollar.strings)))
 }
 
-numeric.row.list <- function(row) {
-  list("before" = 
-         list("pct" = 0,
-              "fee" = dollar.to.numeric(row)),
-       "after"  = 
-         list("pct" = 0,
-              "fee" = dollar.to.numeric(row))
-  )
+percent.to.numeric <- function(percent.strings) {
+  as.numeric(gsub("\\%", "", percent.strings))
 }
 
+is.dollar <- function(strings) {
+  grepl("\\$", strings)
+}
+
+is.percent <- function(strings) {
+  grepl("\\%", strings)
+}
+
+numeric.row.list <- function(input) {
+  asdf <- input
+  asdf[is.dollar(asdf)] <- 
+    lapply(asdf[is.dollar(asdf)], function(string) {
+      list("before" = 
+             list("pct" = 0,
+                  "fee" = dollar.to.numeric(string)),
+           "after"  = 
+             list("pct" = 0,
+                  "fee" = dollar.to.numeric(string))
+      )
+    })
+  asdf[is.percent(asdf)] <- 
+    lapply(asdf[is.percent(asdf)], function(string) {
+      list("before" = 
+             list("pct" = percent.to.numeric(string),
+                  "fee" = 0),
+           "after"  = 
+             list("pct" = percent.to.numeric(string),
+                  "fee" = 0)
+      )
+    })
+  asdf
+}
+  
 create.uship.plan <- function() {
   # set up the uship plan for comparison to marketplace plans.
   uship.plan <- list()
@@ -415,7 +694,9 @@ create.plan.list <- function(plan) {
     dollar.to.numeric(plan$medical_maximum_out_of_pocket_individual_standard)
     
   plan.list$drug_deductible_individual_standard <- 
-    dollar.to.numeric(plan$drug_deductible_individual_standard)
+    ifelse(is.numeric(plan$drug_deductible_individual_standard),
+       dollar.to.numeric(plan$drug_deductible_individual_standard),
+       plan$drug_deductible_individual_standard)
   
   plan.list$drug_maximum_out_of_pocket_individual_standard <- 
     ifelse(plan$drug_maximum_out_of_pocket_individual_standard == "Included in Medical",
@@ -444,5 +725,11 @@ create.plan.list <- function(plan) {
   return(plan.list)
 }
 
+check.copay.list <- function(data) {
+  unique(unlist(lapply(c(service.event.classes, drug.event.classes), 
+                       function(sec) {
+                         unique(data[,sec])})))[!(unique(unlist(lapply(c(service.event.classes, drug.event.classes),
+                                                                               function(sec) {unique(data[,sec])}))) %in% names(copay.lookup))]
+}
 
 
