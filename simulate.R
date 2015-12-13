@@ -40,7 +40,7 @@ ordered.by.median$plot.title <- paste0("Median Total Cost: $", ordered.by.median
 
 top.10 <- ordered.by.median[1:(10*nsims-1),]
 
-unique(top.10[,c("name",  "summary.Min.", "summary.Median", "summary.3rd.Qu.", "summary.Max.")])
+unique(top.10[,c("id", "metal_level", "name",  "summary.Min.", "summary.Median", "summary.3rd.Qu.", "summary.Max.")])
 
 # use Wes Anderson colors.  Let's do Royal Tenenbaums 
 wes_palette("Royal1")
