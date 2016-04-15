@@ -564,7 +564,259 @@ numeric.row.list <- function(input) {
     })
   asdf
 }
+
+create.bcbs.premierppo.plan <- function() {
+  # set up the uship plan for comparison to marketplace plans.
+  bcbs.premier.ppo.plan <- list()
+  bcbs.premier.ppo.plan$plan_marketing_name <- "BCBS PremierPPO"
+  bcbs.premier.ppo.plan$plan_id_standard_component <- "BCBS PremierPPO"
+  bcbs.premier.ppo.plan$my.premium <- 1620/12 
+  bcbs.premier.ppo.plan$medical_deductible_individual_standard <- 0
+  bcbs.premier.ppo.plan$medical_maximum_out_of_pocket_individual_standard <- 1000
+  bcbs.premier.ppo.plan$drug_deductible_individual_standard <- 1000 # same as medical
+  bcbs.premier.ppo.plan$drug_maximum_out_of_pocket_individual_standard <- 2000
+  bcbs.premier.ppo.plan$drug.ded.included <- T
   
+  bcbs.premier.ppo.plan$copays <- 
+    list(
+      "inpatient_facility_standard"        = 
+        list("before" = 
+               list("pct" = 10,
+                    "fee" = 100),
+             "after" = 
+               list("pct" = 10,
+                    "fee" = 100)), 
+      "primary_care_physician_standard"    = 
+        list("before" = 
+               list("pct" = 0,
+                    "fee" = 15),
+             "after" = 
+               list("pct" = 0,
+                    "fee" = 15)),
+      "emergency_room_standard"            = 
+        list("before" = 
+               list("pct" = 0,
+                    "fee" = 100),
+             "after" = 
+               list("pct" = 0,
+                    "fee" = 100)), 
+      "generic_drugs_standard"             = 
+        list("before" = 
+               list("pct" = 0,
+                    "fee" = 7),
+             "after" = 
+               list("pct" = 0,
+                    "fee" = 7)), 
+      "preferred_brand_drugs_standard"     = 
+        list("before" = 
+               list("pct" = 30,
+                    "fee" = 0),
+             "after" = 
+               list("pct" = 30,
+                    "fee" = 0)), 
+      "non_preferred_brand_drugs_standard" = 
+        list("before" = 
+               list("pct" = 30,
+                    "fee" = 0),
+             "after" = 
+               list("pct" = 30,
+                    "fee" = 0)), 
+      "specialty_drugs_standard"           = 
+        list("before" = 
+               list("pct" = 30,
+                    "fee" = 0),
+             "after" = 
+               list("pct" = 30,
+                    "fee" = 0)), 
+      "inpatient_physician_standard"       = 
+        list("before" = 
+               list("pct" = 10,
+                    "fee" = 100),
+             "after" = 
+               list("pct" = 10,
+                    "fee" = 100)),
+      "specialist_standard"                = 
+        list("before" = 
+               list("pct" = 0,
+                    "fee" = 25),
+             "after" = 
+               list("pct" = 0,
+                    "fee" = 25))       
+    )
+  
+  bcbs.premier.ppo.plan$metal_level <- "Platinum"
+  
+  return(bcbs.premier.ppo.plan)
+}
+
+create.bcbs.standard.ppo.plan <- function() {
+  # set up the uship plan for comparison to marketplace plans.
+  bcbs.standard.ppo.plan <- list()
+  bcbs.standard.ppo.plan$plan_marketing_name <- "BCBS StandardPPO"
+  bcbs.standard.ppo.plan$plan_id_standard_component <- "BCBS StandardPPO"
+  bcbs.standard.ppo.plan$my.premium <- 324/12 
+  bcbs.standard.ppo.plan$medical_deductible_individual_standard <- 300
+  bcbs.standard.ppo.plan$medical_maximum_out_of_pocket_individual_standard <- 3000
+  bcbs.standard.ppo.plan$drug_deductible_individual_standard <- 300 # same as medical
+  bcbs.standard.ppo.plan$drug_maximum_out_of_pocket_individual_standard <- 2000
+  bcbs.standard.ppo.plan$drug.ded.included <- T
+  
+  bcbs.standard.ppo.plan$copays <- 
+    list(
+      "inpatient_facility_standard"        = 
+        list("before" = 
+               list("pct" = 20,
+                    "fee" = 150),
+             "after" = 
+               list("pct" = 20,
+                    "fee" = 150)), 
+      "primary_care_physician_standard"    = 
+        list("before" = 
+               list("pct" = 0,
+                    "fee" = 20),
+             "after" = 
+               list("pct" = 0,
+                    "fee" = 20)),
+      "emergency_room_standard"            = 
+        list("before" = 
+               list("pct" = 0,
+                    "fee" = 100),
+             "after" = 
+               list("pct" = 0,
+                    "fee" = 100)), 
+      "generic_drugs_standard"             = 
+        list("before" = 
+               list("pct" = 0,
+                    "fee" = 7),
+             "after" = 
+               list("pct" = 0,
+                    "fee" = 7)), 
+      "preferred_brand_drugs_standard"     = 
+        list("before" = 
+               list("pct" = 30,
+                    "fee" = 0),
+             "after" = 
+               list("pct" = 30,
+                    "fee" = 0)), 
+      "non_preferred_brand_drugs_standard" = 
+        list("before" = 
+               list("pct" = 30,
+                    "fee" = 0),
+             "after" = 
+               list("pct" = 30,
+                    "fee" = 0)), 
+      "specialty_drugs_standard"           = 
+        list("before" = 
+               list("pct" = 30,
+                    "fee" = 0),
+             "after" = 
+               list("pct" = 30,
+                    "fee" = 0)), 
+      "inpatient_physician_standard"       = 
+        list("before" = 
+               list("pct" = 20,
+                    "fee" = 150),
+             "after" = 
+               list("pct" = 20,
+                    "fee" = 150)),
+      "specialist_standard"                = 
+        list("before" = 
+               list("pct" = 0,
+                    "fee" = 30),
+             "after" = 
+               list("pct" = 0,
+                    "fee" = 30))       
+    )
+  
+  bcbs.standard.ppo.plan$metal_level <- "Platinum"
+  
+  return(bcbs.standard.ppo.plan)
+}
+
+create.uhc.premier.plus.ppo.plan <- function() {
+  # set up the uship plan for comparison to marketplace plans.
+  uhc.premier.plus.ppo.plan <- list()
+  uhc.premier.plus.ppo.plan$plan_marketing_name <- "UHC"
+  uhc.premier.plus.ppo.plan$plan_id_standard_component <- "UHC"
+  uhc.premier.plus.ppo.plan$my.premium <- 2268/12 
+  uhc.premier.plus.ppo.plan$medical_deductible_individual_standard <- 0
+  uhc.premier.plus.ppo.plan$medical_maximum_out_of_pocket_individual_standard <- 0
+  uhc.premier.plus.ppo.plan$drug_deductible_individual_standard <- 0 # same as medical
+  uhc.premier.plus.ppo.plan$drug_maximum_out_of_pocket_individual_standard <- 2000
+  uhc.premier.plus.ppo.plan$drug.ded.included <- T
+  
+  uhc.premier.plus.ppo.plan$copays <- 
+    list(
+      "inpatient_facility_standard"        = 
+        list("before" = 
+               list("pct" = 0,
+                    "fee" = 100),
+             "after" = 
+               list("pct" = 0,
+                    "fee" = 100)), 
+      "primary_care_physician_standard"    = 
+        list("before" = 
+               list("pct" = 0,
+                    "fee" = 15),
+             "after" = 
+               list("pct" = 0,
+                    "fee" = 15)),
+      "emergency_room_standard"            = 
+        list("before" = 
+               list("pct" = 0,
+                    "fee" = 100),
+             "after" = 
+               list("pct" = 0,
+                    "fee" = 100)), 
+      "generic_drugs_standard"             = 
+        list("before" = 
+               list("pct" = 0,
+                    "fee" = 7),
+             "after" = 
+               list("pct" = 0,
+                    "fee" = 7)), 
+      "preferred_brand_drugs_standard"     = 
+        list("before" = 
+               list("pct" = 30,
+                    "fee" = 0),
+             "after" = 
+               list("pct" = 30,
+                    "fee" = 0)), 
+      "non_preferred_brand_drugs_standard" = 
+        list("before" = 
+               list("pct" = 30,
+                    "fee" = 0),
+             "after" = 
+               list("pct" = 30,
+                    "fee" = 0)), 
+      "specialty_drugs_standard"           = 
+        list("before" = 
+               list("pct" = 30,
+                    "fee" = 0),
+             "after" = 
+               list("pct" = 30,
+                    "fee" = 0)), 
+      "inpatient_physician_standard"       = 
+        list("before" = 
+               list("pct" = 0,
+                    "fee" = 100),
+             "after" = 
+               list("pct" = 0,
+                    "fee" = 100)),
+      "specialist_standard"                = 
+        list("before" = 
+               list("pct" = 0,
+                    "fee" = 25),
+             "after" = 
+               list("pct" = 0,
+                    "fee" = 25))       
+    )
+  
+  uhc.premier.plus.ppo.plan$metal_level <- "Ludicrous Speed"
+  
+  return(uhc.premier.plus.ppo.plan)
+}
+
 create.uship.plan <- function() {
   # set up the uship plan for comparison to marketplace plans.
   uship.plan <- list()
@@ -581,7 +833,7 @@ create.uship.plan <- function() {
     list(
       "inpatient_facility_standard"        = 
         list("before" = 
-               list("pct" = 90,
+               list("pct" = 10,
                     "fee" = 0),
              "after" = 
                list("pct" = 25,

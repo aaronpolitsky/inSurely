@@ -8,10 +8,12 @@ source('clean_data_helper.R')
 
 # for each row, generate a plan data structure in a list.  save this as a list.
 plans.list <- alply(unclean.data, .margins = 1, create.plan.list)
-plans.list[[length(plans.list)+1]] <- create.uship.plan()
+plans.list[[length(plans.list)+1]] <- create.bcbs.premierppo.plan()
+plans.list[[length(plans.list)+1]] <- create.bcbs.standard.ppo.plan()
+plans.list[[length(plans.list)+1]] <- create.uhc.premier.plus.ppo.plan()
 
 # number of simulated years of medical events
-nsims <- 10000
+nsims <- 1000
 
 set.seed(99)
 
